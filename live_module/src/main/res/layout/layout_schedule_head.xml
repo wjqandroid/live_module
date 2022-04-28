@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout"
+    android:layout_marginLeft="@dimen/dip12"
+    android:layout_marginRight="@dimen/dip12"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/wrap_layout"
+        android:textColor="@color/COLOR_BLACK_333333"
+        android:textSize="@dimen/font16" />
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/dip10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/dip20"
+            android:layout_height="@dimen/dip20"
+            android:src="@drawable/ic_live_time" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/wrap_layout"
+            android:layout_marginLeft="@dimen/dip5"
+            android:textColor="@color/COLOR_GRAY_999999"
+            android:textSize="@dimen/font14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/wrap_layout"
+        android:layout_marginTop="@dimen/dip5"
+        android:textColor="@color/COLOR_GRAY_999999"
+        android:textSize="@dimen/font16" />
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/dip10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/wrap_layout"
+            android:text="@string/schedule"
+            android:textColor="@color/COLOR_GRAY_999999"
+            android:textSize="@dimen/font16" />
+
+        <View
+            style="@style/match_height_1"
+            android:layout_marginLeft="@dimen/dip10"
+            android:background="@color/COLOR_GRAY_DDDDDD" />
+    </LinearLayout>
+
+</LinearLayout>

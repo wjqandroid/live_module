@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match_layout"
+    android:background="@color/COLOR_WHITE_FFFFFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_title_layout" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@android:color/transparent"
+                app:expandedTitleGravity="top"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:paddingHorizontal="@dimen/common_padding_horizontal"
+                    android:paddingVertical="@dimen/dip10"
+                    android:background="@color/COLOR_WHITE_FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.visionvera.library.widget.banner.Banner
+
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="144dp" />
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_live"
+                style="@style/match_height_45"
+                android:textStyle="bold"
+                app:tabBackground="@color/COLOR_WHITE_FFFFFF"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="@dimen/dip0"
+                app:tabMaxWidth="@dimen/dip0"
+                app:tabMinWidth="@dimen/dip30"
+                app:tabMode="scrollable" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_live"
+                style="@style/match_layout" />
+
+            <LinearLayout
+                android:id="@+id/net_error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:src="@drawable/base_module_net_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="4"
+                    android:text="@string/base_module_data_load_error"
+                    android:textSize="14dp"
+                    android:textColor="#999999" />
+
+
+                <TextView
+                    android:textSize="15sp"
+                    android:id="@+id/tv_error_net_reload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/drawable_reload"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/base_module_reload_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dip50"
+    android:background="@color/COLOR_WHITE_FFFFFF">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/COLOR_GRAY_DDDDDD"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip35"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dip10"
+        android:layout_marginRight="@dimen/dip10"
+        android:layout_toLeftOf="@+id/tv_send"
+        android:background="@drawable/bg_solid_d8d8d8_stroke_1_999999"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_question"
+            style="@style/wrap_match"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_style"
+            android:paddingLeft="@dimen/dip10"
+            android:paddingRight="@dimen/dip10" />
+
+        <TextView
+            style="@style/wrap_layout"
+            android:layout_gravity="center_vertical"
+            android:text="@string/question"
+            android:textColor="@color/COLOR_BLACK_333333"
+            android:textSize="@dimen/font10" />
+
+        <View
+            android:layout_width="@dimen/dip1"
+            android:layout_height="@dimen/dip10"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dip5"
+            android:background="@color/COLOR_BLACK_333333" />
+
+        <EditText
+            android:id="@+id/et_im_content"
+            style="@style/match_layout"
+            android:layout_marginLeft="@dimen/dip5"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/hint_send"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/COLOR_BLACK_333333"
+            android:textColorHint="@color/COLOR_GRAY_999999"
+            android:textSize="@dimen/font14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="@dimen/dip40"
+        android:layout_height="@dimen/dip30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dip10"
+        android:background="@drawable/bg_soild_21a3f0_r2"
+        android:gravity="center"
+        android:text="@string/send"
+        android:textColor="@color/COLOR_WHITE_FFFFFF"
+        android:textSize="@dimen/font12" />
+</RelativeLayout>

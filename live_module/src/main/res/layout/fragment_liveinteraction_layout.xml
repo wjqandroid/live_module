@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout"
+    android:background="@color/COLOR_WHITE_FFFFFF">
+
+    <FrameLayout
+        android:id="@+id/frame_input"
+        style="@style/match_wrap"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/im_keyboard_layout" />
+    </FrameLayout>
+
+    <RelativeLayout
+        style="@style/match_layout"
+        android:layout_above="@+id/frame_input">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/chat_swipe"
+            style="@style/match_layout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chat_recycler_view"
+                style="@style/match_layout"
+                android:transcriptMode="normal" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/tv_login_tip"
+            style="@style/wrap_layout"
+            android:paddingLeft="@dimen/dip5"
+            android:paddingTop="@dimen/dip2"
+            android:paddingBottom="@dimen/dip2"
+            android:textColor="@color/COLOR_BLACK_222222"
+            android:textSize="@dimen/font12" />
+    </RelativeLayout>
+</RelativeLayout>

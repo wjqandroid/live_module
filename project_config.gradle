@@ -1,0 +1,17 @@
+//引用相关存放处
+ext {
+    isAccountApplication = false
+    isEvalutionApplication = true
+    isLiveApplication = false
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "29.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            versionCode      : 98,
+
+            //bugly要求：上传APP的versioncode必须不低于外发版本的versiocode，否则用户检测不到更新
+            versionName      : "9.0.2.2"    //必须是int或者float，否则影响线上升级
+
+    ]
+}

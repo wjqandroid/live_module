@@ -1,0 +1,1 @@
+package com.visionvera.live.module.home.callback;/** * @Desc 接收消息 * * @Author yemh * @Date 2019-08-01 15:37 * */public interface MessageCallBack {    void updateCallback(String message);}

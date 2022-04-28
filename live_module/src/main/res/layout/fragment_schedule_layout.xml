@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_schedule"
+        style="@style/match_layout"
+        android:layout_marginTop="@dimen/dip10"
+        android:layout_marginBottom="@dimen/dip30"
+        android:background="@color/COLOR_WHITE_FFFFFF"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/dip12"
+        android:paddingRight="@dimen/dip12" />
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_depression"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="84dp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dip119"
+        android:layout_height="match_parent">
+
+        <com.visionvera.library.widget.ICircleImageView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:id="@+id/iv_live_shaortcut"
+            android:layout_width="@dimen/dip119"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:base_module_circle_corner="4"
+            android:src="@drawable/no_banner" />
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/dip3"
+            android:background="#767676"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/ivRedPoint"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:src="#FB7764"
+                app:civ_border_width="0dp"
+                app:civ_border_color="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_marginStart="@dimen/dip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直播"
+                android:textColor="#ffd2dff5"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/dip5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="构建积极心态，共建和谐家园"
+            android:textColor="#ff333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            tools:text="为了帮助全国各大厂干部、职工、群众以及奋战在第一线抗议医务人员…"
+            android:textColor="#ff666666"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_marginStart="@dimen/dip3"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                tools:text="今天 15:00 - 17:30"
+                android:textColor="#ffa0a5b0"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: "maven-publish"
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        multiDexEnabled true
+
+//        if (isApplication) {
+//            //组件模式下设置applicationId
+//            applicationId "com.visionvera.live"
+//        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+    productFlavors{
+        urlDevelop{ //开发地址
+
+        }
+        urlTest{ //测试环境
+
+        }
+        urlYanshi_Tx{//演示环境 腾讯云
+
+        }
+        urlFormat{//正式环境
+
+        }
+    }
+
+    //jdk1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.gitee.cloud_international_wei_jiaqi:userc:2.0'
+    implementation 'com.github.jitpack:android-example:1.0.1'
+    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+//    //需要引入的库base
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+    implementation 'com.lxj:xpopup:2.1.7'
+
+    //   地址：https://github.com/qyxxjd/MultipleStatusView
+    // 一个支持多种状态的自定义View,可以方便的切换到：加载中视图、错误视图、空数据视图、网络异常视图、内容视图。
+    api 'com.classic.common:multiple-status-view:1.6'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    implementation 'com.alibaba:arouter-api:1.5.0'
+
+    //webview库  https://github.com/Justson/AgentWeb
+    api 'com.just.agentweb:agentweb:4.1.2'
+
+    // 地址：https://github.com/Blankj/AndroidUtilCode  通用工具类库 AndroidUtilCode
+    api 'com.blankj:utilcodex:1.25.9'
+
+    //rxlifecycle, 地址：https://github.com/trello/RxLifecycle,用于处理使用RxJava导致页面生命周期造成的内存泄漏问题
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+
+    // android 4.4以上沉浸式状态栏和沉浸式导航栏管理，包括状态栏字体颜色，一句代码轻松实现，以及对bar的其他设置,地址：implementation 'com.gyf.immersionbar:immersionbar:2.3.3-beta09'
+    api 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+
+    // fragment快速实现（可选）
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta05'
+
+    //  地址：https://github.com/JakeWharton/butterknife,便于快速找到xml中的控件，代替findviewbyid
+    implementation  'com.jakewharton:butterknife:10.2.0'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    //  地址：https://github.com/orhanobut/logger,打log的著名库，使用方便，格式美观，便于管理。
+    api 'com.orhanobut:logger:2.2.0'
+    api "androidx.multidex:multidex:2.0.0"
+
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'  //没有使用特殊Header，可以不加这行
+
+    //https://github.com/greenrobot/greenDAO
+    api 'org.greenrobot:greendao:3.3.0'
+    //用到okhttp
+    api 'com.squareup.okhttp3:okhttp:3.14.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.14.0'
+
+
+    //   地址：https://github.com/square/retrofit
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    //Retrofit的rx解析库
+    api 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    //Retrofit的字符串解析库(转换String字符串)
+    api 'com.squareup.retrofit2:converter-scalars:2.5.0'
+
+    //用到gson转换，来配合使用okhttp
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //   地址：https://github.com/bumptech/glide,图片加载
+    api 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //Android中节操播放器JieCaoVideoPlayer使用
+    //https://blog.csdn.net/zhaihaohao1/article/details/78029766
+    implementation 'cn.jzvd:jiaozivideoplayer:6.0.0'
+
+}

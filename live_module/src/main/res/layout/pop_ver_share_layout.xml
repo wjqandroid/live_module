@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:background="@drawable/bg_solid_ffffff_leftcorner_5_rightcorner_5"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/match_wrap">
+
+            <TextView
+                style="@style/match_height_1"
+                android:layout_marginLeft="@dimen/dip16"
+                android:layout_marginRight="@dimen/dip16"
+                android:layout_marginTop="@dimen/dip40"
+                android:background="@color/COLOR_GRAY_CCCCCC" />
+
+            <TextView
+                android:layout_width="@dimen/dip70"
+                android:layout_height="@dimen/dip30"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dip25"
+                android:background="@color/COLOR_WHITE_FFFFFF"
+                android:gravity="center"
+                android:text="@string/share_to"
+                android:textColor="@color/COLOR_BLACK_222222"
+                android:textSize="@dimen/font20" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip50"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_share_qq"
+                style="@style/share_ll_ver_style"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/share_img_style"
+                    android:src="@drawable/qq" />
+
+                <TextView
+                    style="@style/share_text_style"
+                    android:text="@string/share_qq" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share_weixin"
+                style="@style/share_ll_ver_style"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/share_img_style"
+                    android:src="@drawable/wechat" />
+
+                <TextView
+                    style="@style/share_text_style"
+                    android:text="@string/share_weixin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_share_moment"
+                style="@style/share_ll_ver_style"
+                android:layout_weight="1">
+
+                <ImageView
+                    style="@style/share_img_style"
+                    android:src="@drawable/friends" />
+
+                <TextView
+                    style="@style/share_text_style"
+                    android:text="@string/share_moment" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_share_cancle"
+            style="@style/width_88_height_88"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dip17"
+            android:layout_marginTop="@dimen/dip47"
+            android:contentDescription="@string/desc"
+            android:padding="@dimen/dip33"
+            android:src="@drawable/cancle" />
+    </LinearLayout>
+
+</LinearLayout>

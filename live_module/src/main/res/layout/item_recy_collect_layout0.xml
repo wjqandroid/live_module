@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_wrap"
+    android:layout_marginLeft="@dimen/dip4"
+    android:layout_marginRight="@dimen/dip4"
+    android:background="@color/COLOR_WHITE_FFFFFF"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip95"
+        android:layout_marginTop="@dimen/dip16"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dip150"
+            android:layout_height="@dimen/dip95">
+
+            <ImageView
+                android:id="@+id/iv_live_shaortcut"
+                style="@style/match_layout"
+                android:contentDescription="@string/desc"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="@dimen/dip27"
+                android:layout_height="@dimen/dip15"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dip6"
+                android:gravity="center"
+                android:textColor="@color/COLOR_WHITE_FFFFFF"
+                android:textSize="@dimen/font12" />
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/match_wrap"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/wrap_layout"
+                android:layout_marginLeft="@dimen/dip8"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="急救中应注意的三点"
+                android:textColor="@color/COLOR_BLACK_222222"
+                android:textSize="@dimen/font15" />
+
+            <LinearLayout
+                style="@style/wrap_layout"
+                android:layout_marginLeft="@dimen/dip8"
+                android:layout_marginTop="@dimen/dip10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dip14"
+                    android:layout_height="@dimen/dip14"
+                    android:src="@drawable/ic_expert" />
+
+                <TextView
+                    android:id="@+id/tv_expert"
+                    style="@style/wrap_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:text="XXXX"
+                    android:textColor="@color/COLOR_GRAY_666666"
+                    android:textSize="@dimen/font14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                style="@style/match_wrap"
+                android:layout_marginLeft="@dimen/dip8"
+                android:layout_marginTop="@dimen/dip10"
+                android:layout_marginRight="@dimen/dip5">
+
+                <ImageView
+                    android:id="@+id/iv_start_time"
+                    android:layout_width="@dimen/dip14"
+                    android:layout_height="@dimen/dip14"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_start_time" />
+
+                <TextView
+                    android:id="@+id/tv_live_time"
+                    style="@style/wrap_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip5"
+                    android:layout_toRightOf="@+id/iv_start_time"
+                    android:text="2019-10-15 15:20"
+                    android:textColor="@color/COLOR_GRAY_666666"
+                    android:textSize="@dimen/font10" />
+
+                <TextView
+                    android:layout_width="@dimen/dip35"
+                    android:layout_height="@dimen/dip15"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/dip6"
+                    android:background="@drawable/bg_solid_ffffff_stroke_1_1d99ee"
+                    android:gravity="center"
+                    android:text="@string/liveing"
+                    android:textColor="@color/COLOR_BLUE_1D99EE"
+                    android:textSize="@dimen/font9" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

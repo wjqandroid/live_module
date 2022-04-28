@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--图片选择item线条样式-->
+    <style name="line_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dipHalf</item>
+        <item name="android:background">@color/COLOR_GRAY_DDDDDD</item>
+    </style>
+
+    <style name="share_ll_ver_style">
+        <item name="android:layout_width">@dimen/dip0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="share_ll_hor_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dip0</item>
+    </style>
+    <style name="share_img_style">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">@dimen/dip55</item>
+        <item name="android:layout_height">@dimen/dip55</item>
+        <item name="android:contentDescription">@string/desc</item>
+    </style>
+
+    <style name="share_text_style" parent="wrap_layout">
+        <item name="android:textSize">@dimen/font15</item>
+        <item name="android:textColor">@color/COLOR_GRAY_666666</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/dip5</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+
+    <!--这是当文字正常的显示样式-->
+    <style name="MyStyle_TextInputLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#d12b2b</item>
+    </style>
+    <!--这是当文字长度超过之后的显示样式-->
+    <style name="MyStyle2_TextInputLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#a11c1c</item>
+    </style>
+    <!--这是错误提示的样式-->
+    <style name="MyStyle3_TextInputLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#3d29a9</item>
+    </style>
+
+    <style name="AppProgressBarStyle">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/layer_list_progress_bar</item>
+        <!--<item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>-->
+    </style>
+
+    <declare-styleable name="TCPointSeekBar">
+        <attr name="psb_thumbBackground" format="reference" />
+        <attr name="psb_backgroundColor" format="color" />
+        <attr name="psb_progressColor" format="color" />
+        <attr name="psb_progress" format="integer" />
+        <attr name="psb_max" format="integer" />
+        <attr name="psb_progressHeight" format="dimension" />
+    </declare-styleable>
+
+    <style name="RadiobuttonStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--PopupWindow弹出动画样式(ver)-->
+    <style name="ver_pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_ver_show</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_ver_hide</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+    <!--PopupWindow弹出动画样式(hor)-->
+    <style name="hor_pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_hor_show</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/pop_hor_hide</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+</resources>

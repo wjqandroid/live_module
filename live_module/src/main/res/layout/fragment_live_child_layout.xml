@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        style="@style/match_layout"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_live"
+            style="@style/match_layout"
+            android:background="@color/COLOR_WHITE_FFFFFF"
+            android:overScrollMode="never"
+            android:paddingLeft="@dimen/dip12"
+            android:paddingRight="@dimen/dip12" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        style="@style/wrap_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dip200"
+        android:text="@string/no_data"
+        android:textColor="@color/COLOR_BLACK_222222"
+        android:textSize="@dimen/font18"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/empty_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/base_module_net_empty" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.4"
+            android:text="@string/base_module_no_more_data"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#999999" />
+
+        <TextView
+            android:id="@+id/tv_data_empty_reload"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/drawable_reload"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/base_module_reload_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/net_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:src="@drawable/base_module_net_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="4"
+            android:text="@string/base_module_data_load_error"
+            android:textSize="14dp"
+            android:textColor="#999999" />
+
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/tv_error_net_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/drawable_reload"
+            android:paddingBottom="10dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:text="@string/base_module_reload_content" />
+    </LinearLayout>
+</RelativeLayout>

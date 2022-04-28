@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout">
+
+    <LinearLayout
+        style="@style/match_layout"
+        android:background="@color/COLOR_WHITE_FFFFFF"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/match_height_45"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/width_45_height_45"
+                android:contentDescription="@string/desc"
+                android:paddingTop="@dimen/dip13"
+                android:paddingBottom="@dimen/dip13"
+                android:src="@drawable/arrow_left" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip30"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dip5"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_toLeftOf="@+id/tv_search_cancle"
+                android:background="@drawable/bg_soild_f1f1f1_r180">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="@dimen/dip20"
+                    android:layout_height="@dimen/dip15"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:contentDescription="@string/desc"
+                    android:src="@drawable/in_search" />
+
+                <EditText
+                    android:id="@+id/et_query_condition"
+                    style="@style/match_layout"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dip10"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:layout_toLeftOf="@+id/iv_clear"
+                    android:layout_toRightOf="@+id/iv_search"
+                    android:background="@color/transparent"
+                    android:hint="@string/hint_search"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/iv_clear"
+                    android:layout_width="@dimen/dip30"
+                    android:layout_height="@dimen/dip30"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dip5"
+                    android:contentDescription="@string/desc"
+                    android:padding="@dimen/dip6"
+                    android:src="@drawable/ic_clear"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_search_cancle"
+                style="@style/width_45_height_45"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dip5"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="@color/COLOR_BLUE_2B98ED"
+                android:textSize="@dimen/font16" />
+
+        </RelativeLayout>
+
+        <View style="@style/line_style" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            style="@style/match_layout"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
+                style="@style/match_layout"
+                android:background="@color/COLOR_WHITE_FFFFFF"
+                android:overScrollMode="never" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        style="@style/wrap_layout"
+        android:layout_centerInParent="true"
+        android:text="@string/no_data"
+        android:textColor="@color/COLOR_BLACK_222222"
+        android:textSize="@dimen/font18"
+        android:visibility="gone" />
+</RelativeLayout>

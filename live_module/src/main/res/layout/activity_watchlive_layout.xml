@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/match_layout"
+    android:background="@color/COLOR_WHITE_FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_super_layout"
+        style="@style/match_wrap"
+        android:background="@color/COLOR_BLACK_000000">
+
+        <!--        <com.visionvera.live.player.SuperPlayerView-->
+        <!--            android:id="@+id/superPlayerView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="215dp" />-->
+
+        <cn.jzvd.JZVideoPlayerStandard
+            android:id="@+id/jc_videoplayer"
+            android:layout_width="match_parent"
+            android:layout_height="215dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_ver_cover"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_ver_cover"
+                style="@style/match_layout"
+                android:src="@drawable/no_banner" />
+
+            <TextView
+                android:id="@+id/tv_ver_desc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip25"
+                android:layout_alignParentBottom="true"
+                android:background="@color/TRANSPARENT_33"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dip10"
+                android:textColor="@color/COLOR_WHITE_FFFFFF"
+                android:textSize="@dimen/font14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_hor_cover"
+            style="@style/match_layout"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_hor_cover"
+                style="@style/match_layout"
+                android:scaleType="centerCrop"
+                android:src="@drawable/no_banner" />
+
+            <TextView
+                android:id="@+id/tv_hor_desc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip25"
+                android:layout_alignParentBottom="true"
+                android:background="@color/TRANSPARENT_33"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dip10"
+                android:textColor="@color/COLOR_WHITE_FFFFFF"
+                android:textSize="@dimen/font14" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_collects"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/ic_collect"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_im"
+        style="@style/match_height_45"
+        android:layout_below="@+id/ll_super_layout"
+        android:textStyle="bold"
+        app:tabBackground="@color/COLOR_WHITE_FFFFFF"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/COLOR_BLUE_21A3F0"
+        app:tabIndicatorHeight="@dimen/dip1"
+        app:tabMaxWidth="@dimen/dip0"
+        app:tabMinWidth="@dimen/dip30"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/COLOR_BLUE_21A3F0"
+        app:tabTextColor="@color/COLOR_GRAY_666666" />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dipHalf"
+        android:layout_below="@+id/tab_im"
+        android:background="@color/COLOR_GRAY_DDDDDD" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_im"
+        style="@style/match_layout"
+        android:layout_below="@id/v_line" />
+</RelativeLayout>

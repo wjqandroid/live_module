@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="@dimen/dip160"
+    android:layout_height="match_parent"
+    android:background="@color/TRANSPARENT_60"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/match_layout">
+
+        <RelativeLayout
+            style="@style/wrap_layout"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/match_height_1"
+                android:layout_marginLeft="@dimen/dip16"
+                android:layout_marginTop="@dimen/dip40"
+                android:layout_toLeftOf="@id/tv_share"
+                android:background="@color/COLOR_GRAY_CCCCCC" />
+
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="@dimen/dip65"
+                android:layout_height="@dimen/dip30"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dip25"
+                android:gravity="center"
+                android:text="@string/share_to"
+                android:textColor="@color/COLOR_BLACK_222222"
+                android:textSize="@dimen/font20" />
+
+            <TextView
+                style="@style/match_height_1"
+                android:layout_marginRight="@dimen/dip16"
+                android:layout_marginTop="@dimen/dip40"
+                android:layout_toRightOf="@id/tv_share"
+                android:background="@color/COLOR_GRAY_CCCCCC" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/match_layout"
+            android:layout_marginTop="@dimen/dip70"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_share_qq"
+                style="@style/share_ll_hor_style"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    style="@style/wrap_layout"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/share_img_style"
+                        android:src="@drawable/qq" />
+
+                    <TextView
+                        style="@style/share_text_style"
+                        android:text="@string/share_qq" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_share_weixin"
+                style="@style/share_ll_hor_style"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    style="@style/wrap_layout"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/share_img_style"
+                        android:src="@drawable/wechat" />
+
+                    <TextView
+                        style="@style/share_text_style"
+                        android:text="@string/share_weixin" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_share_moment"
+                style="@style/share_ll_hor_style"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    style="@style/wrap_layout"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/share_img_style"
+                        android:src="@drawable/friends" />
+
+                    <TextView
+                        style="@style/share_text_style"
+                        android:text="@string/share_moment" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

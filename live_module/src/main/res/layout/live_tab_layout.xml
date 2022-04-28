@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_layout">
+
+    <TextView
+        android:id="@+id/tv_find_tab"
+        style="@style/wrap_layout"
+        android:layout_centerHorizontal="true"
+        android:textColor="@drawable/live_tab_text_selector" />
+
+</RelativeLayout>

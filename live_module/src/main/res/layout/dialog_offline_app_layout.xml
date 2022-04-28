@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dip250"
+    android:layout_height="@dimen/dip130"
+    android:background="@drawable/bg_soild_ffffff_r8"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/wrap_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dip10"
+        android:text="@string/offine_notice"
+        android:textColor="@color/COLOR_BLACK_222222"
+        android:textSize="@dimen/font15" />
+
+    <TextView
+        style="@style/wrap_layout"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dip3"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/dip10"
+        android:paddingRight="@dimen/dip10"
+        android:text="@string/login_retry"
+        android:textColor="@color/COLOR_BLACK_222222"
+        android:textSize="@dimen/font12" />
+
+    <View
+        style="@style/line_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dip40"
+        android:background="@color/COLOR_GRAY_CCCCCC" />
+
+
+    <RelativeLayout
+        style="@style/match_height_40"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/match_layout"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/COLOR_BLUE_277EDC"
+            android:textSize="@dimen/font16" />
+    </RelativeLayout>
+
+</RelativeLayout>

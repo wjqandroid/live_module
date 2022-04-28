@@ -1,0 +1,2 @@
+include ':live_module'
+rootProject.name = "live_module"

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_wrap"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/wrap_layout"
+        android:layout_marginTop="@dimen/dip20"
+        android:background="@color/COLOR_BLUE_D7EBF0"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dip5"
+        android:paddingRight="@dimen/dip5"
+        android:text="2019/08/03"
+        android:textColor="@color/COLOR_BLUE_507AA7"
+        android:textSize="@dimen/font14" />
+
+    <LinearLayout
+        android:id="@+id/ll_child_schedule"
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/dip10"
+        android:orientation="vertical" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_wrap"
+    android:layout_marginLeft="@dimen/dip4"
+    android:layout_marginRight="@dimen/dip4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip95">
+
+        <ImageView
+            android:id="@+id/iv_live_shaortcut"
+            style="@style/match_layout"
+            android:src="@drawable/ic_default"
+            android:contentDescription="@string/desc"
+             />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="@dimen/dip27"
+            android:layout_height="@dimen/dip15"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dip6"
+            android:background="@drawable/bg_solid_ffffff_stroke_1_21a3f0"
+            android:gravity="center"
+            android:textSize="@dimen/font11" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/match_wrap"
+        android:layout_marginTop="@dimen/dip5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/COLOR_BLACK_222222"
+        android:textSize="@dimen/font15" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip15"
+        android:layout_marginTop="@dimen/dip6"
+        android:layout_marginBottom="@dimen/dip16">
+
+        <ImageView
+            android:layout_width="@dimen/dip11"
+            android:layout_height="@dimen/dip11"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/desc"
+            android:src="@drawable/time" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/wrap_layout"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip15"
+            android:text="80分钟"
+            android:textColor="@color/COLOR_GRAY_666666"
+            android:textSize="@dimen/font11" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/wrap_layout"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip15"
+            android:text="2019-10-15"
+            android:textColor="@color/COLOR_GRAY_666666"
+            android:textSize="@dimen/font11" />
+    </RelativeLayout>
+
+</LinearLayout>
